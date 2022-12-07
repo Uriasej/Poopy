@@ -22,7 +22,7 @@ public class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, Poopy.MOD_ID);
 
 
-    public static final RegistryObject<Block> POOPY_BLOCK = registerBlock("poopy_block.json",
+    public static final RegistryObject<Block> POOPY_BLOCK = registerBlock("poopy_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.MOSS).strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.POOPY_TAB);
 
 
