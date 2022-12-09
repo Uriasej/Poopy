@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +16,7 @@ import static com.confusingfool.poopy.item.ModItems.POOPY;
 @Mod.EventBusSubscriber(modid = Poopy.MOD_ID)
 public class ModEvents
 {
+
     @SubscribeEvent
     public static void onLivingHurt(LivingHurtEvent event)
     {
@@ -38,7 +40,10 @@ public class ModEvents
                 {
                     if (player.isOnGround())
                     {
-                        player.spawnAtLocation(new ItemStack(POOPY.get()));
+                        if (event.getDuration() == 0)
+                        {
+                            player.spawnAtLocation(new ItemStack(POOPY.get()));
+                        }
                     }
                 }
             }
