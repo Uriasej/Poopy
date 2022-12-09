@@ -3,10 +3,12 @@ package com.confusingfool.poopy.block;
 import com.confusingfool.poopy.Poopy;
 import com.confusingfool.poopy.item.ModCreativeModeTab;
 import com.confusingfool.poopy.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,8 +25,13 @@ public class ModBlocks
 
 
     public static final RegistryObject<Block> POOPY_BLOCK = registerBlock("poopy_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS).strength(3f).requiresCorrectToolForDrops()), ModCreativeModeTab.POOPY_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.POOPY_TAB);
 
+    public static final RegistryObject<Block> JASPER_ORE = registerBlock("jasper_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
+                    .strength(6f)
+                    .requiresCorrectToolForDrops(),
+                    UniformInt.of(3,7)), ModCreativeModeTab.POOPY_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {

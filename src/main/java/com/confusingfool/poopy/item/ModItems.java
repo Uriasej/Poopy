@@ -23,6 +23,9 @@ public class ModItems
     public static final RegistryObject<Item> POOPY_DIAMOND = ITEMS.register("poopy_diamond",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
+    public static final RegistryObject<Item> JASPER_CRYSTAL = ITEMS.register("jasper_crystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+
     public static final RegistryObject<Item> DRIED_POOPY = ITEMS.register("dried_poopy",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(8).saturationMod(6f).meat().fast().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 4), 0.9f).build())));
 

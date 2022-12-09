@@ -2,6 +2,8 @@ package com.confusingfool.poopy;
 
 import com.confusingfool.poopy.block.ModBlocks;
 import com.confusingfool.poopy.item.ModItems;
+import com.confusingfool.poopy.world.feature.ModConfuguredFeatures;
+import com.confusingfool.poopy.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,6 +29,8 @@ public class Poopy
 
         modEventBus.addListener(this::commonSetup);
 
+        ModConfuguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
