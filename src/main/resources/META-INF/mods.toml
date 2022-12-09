@@ -19,7 +19,7 @@ modId="poopy" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="0.0.1-1.19.2" #mandatory
+version="0.1.1-1.19.2" #mandatory
  # A display name for the mod
 displayName="Poopy" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -27,9 +27,9 @@ displayName="Poopy" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="logo.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to Kaupenjoe for the tutorial series!!!" #optional
+credits="Thanks to Kaupenjoe for the tutorial series!!! Also Thanks to Chat GPT for the debugging and method explanation and usage examples." #optional
 # A text field displayed in the mod UI
 authors="Eden Urias" #optional
 # Display Test controls the display for your mod in the server connection screen
@@ -42,11 +42,16 @@ authors="Eden Urias" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-When you eat food while you're crouching you drop a poopy.
 
-Craft your poopy into a block to get poopy block
+When you eat meat while crouching on the ground you get a poopy.
+Put your poopy in a Smoker to get Dried Poopy and +10 xp.
 
-When another player eats your poopy, the next time they poopy will be a diamond :p
+Eat your Dried Poopy to heal up super fast and gain damage resistance.
+
+Find Jasper Ore and mine it to get Jasper Crystal.
+Put your Jasper Crystal in a Blast Furnace to get Melted Jasper
+
+Put your Melted Jasper in the Brewing Stand as an ingredient along with the Dried Poopy and get Poopy Essence.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.poopy]] #optional

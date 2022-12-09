@@ -26,7 +26,7 @@ public class ModConfuguredFeatures
     ));
 
     public static final RegistryObject<ConfiguredFeature<?,?>> JASPER_ORE = CONFIGURED_FEATURES.register("jasper_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_JASPER_ORES.get(), 5)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_JASPER_ORES.get(), 20)));
     public static void register(IEventBus eventBus)
     {
         CONFIGURED_FEATURES.register(eventBus);
