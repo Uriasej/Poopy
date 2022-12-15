@@ -12,6 +12,9 @@
   "item.minecraft.potion.effect.poopy_essence": "Poopy Essence",
   "item.minecraft.splash_potion.effect.poopy_essence": "Explosive Poopy Essence",
   "item.minecraft.lingering_potion.effect.poopy_essence": "Lingering Poopy Essence",
+  "item.minecraft.potion.effect.dysentery_cure": "Dysentery Cure",
+  "item.minecraft.splash_potion.effect.dysentery_cure": "Splash Potion of Dysentery Cure",
+  "item.minecraft.lingering_potion.effect.dysentery_cure": "Lingering Potion of Dysentery Cure",
 
   "itemGroup.poopytab": "Poopy",
 

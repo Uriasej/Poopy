@@ -19,7 +19,7 @@ public class ModPlacedFeatures
 
     public static final RegistryObject<PlacedFeature> JASPER_ORE_PLACED = PLACED_FEATURES.register("jasper_ore_placed",
             () -> new PlacedFeature(ModConfuguredFeatures.JASPER_ORE.getHolder().get(),
-                    commonOrePlacement(90, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(384)))));
+                    commonOrePlacement(200, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(384)))));
 
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
