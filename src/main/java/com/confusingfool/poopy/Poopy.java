@@ -8,7 +8,6 @@ import com.confusingfool.poopy.util.BetterBrewingRecipe;
 import com.confusingfool.poopy.world.feature.ModConfuguredFeatures;
 import com.confusingfool.poopy.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -48,6 +47,8 @@ public class Poopy
         event.enqueueWork(() -> {
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                     ModItems.DRIED_POOPY.get(), ModPotions.POOPY_ESSENCE.get()));
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.POOPY_ESSENCE.get(),
+                    ModItems.MOLTEN_JASPER.get(), ModPotions.DYSENTERY_CURE.get()));
         });
     }
 

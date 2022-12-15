@@ -3,7 +3,6 @@ package com.confusingfool.poopy.effect;
 import com.confusingfool.poopy.Poopy;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,6 +16,9 @@ public class ModEffects
 
     public static final RegistryObject<MobEffect> DYSENTERY = MOB_EFFECTS.register("dysentery",
             () -> new DysenteryEffect(MobEffectCategory.HARMFUL, 8084480));
+
+    public static final RegistryObject<MobEffect> DYSENTERY_CURE_EFFECT = MOB_EFFECTS.register("dysentery_cure_effect",
+            () -> new DysenteryCureEffect(MobEffectCategory.BENEFICIAL, 10478271));
 
     public static void register(IEventBus eventBus)
     {

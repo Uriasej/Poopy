@@ -8,6 +8,8 @@ import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.Objects;
+
 import static com.confusingfool.poopy.item.ModItems.FOUL_POOPY;
 import static com.confusingfool.poopy.item.ModItems.POOPY;
 
@@ -17,16 +19,12 @@ public class ModEvents
     @SubscribeEvent
     public static void onPlayerEats(LivingEntityUseItemEvent event)
     {
-        if (event.getEntity() instanceof Player player)
+        if (event.getEntity() instanceof Player player && event.getItem().isEdible())
         {
-            if (event.getItem().getFoodProperties(player).isMeat())
-            {
-                if (player.isCrouching())
-                {
-                    if (player.isOnGround())
-                    {
-                        if (event.getDuration() == 0 && !event.getEntity().hasEffect(ModEffects.DYSENTERY.get()))
-                        {
+             if (Objects.requireNonNull(event.getItem().getFoodProperties(player)).isMeat()) {
+                if (player.isCrouching()) {
+                    if (player.isOnGround()) {
+                        if (event.getDuration() == 0 && !event.getEntity().hasEffect(ModEffects.DYSENTERY.get())) {
                             player.spawnAtLocation(new ItemStack(POOPY.get()));
                         } else if (event.getDuration() == 0 && event.getEntity().hasEffect(ModEffects.DYSENTERY.get())) {
                             player.spawnAtLocation(new ItemStack(FOUL_POOPY.get()));

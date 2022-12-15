@@ -19,6 +19,9 @@ public class ModPotions
     public static final RegistryObject<Potion> POOPY_ESSENCE = POTIONS.register("poopy_essence",
             () -> new Potion(new MobEffectInstance(ModEffects.DYSENTERY.get(), 6000, 4)));
 
+    public static final RegistryObject<Potion> DYSENTERY_CURE = POTIONS.register("dysentery_cure",
+            () -> new Potion(new MobEffectInstance(ModEffects.DYSENTERY_CURE_EFFECT.get(), 1)));
+
 
     public static void register(IEventBus eventBus)
     {
