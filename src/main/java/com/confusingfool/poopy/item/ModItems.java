@@ -27,7 +27,7 @@ public class ModItems
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> DRIED_POOPY = ITEMS.register("dried_poopy",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(8).saturationMod(6f).meat().fast().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 4), 0.9f).build())));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(2.4f).meat().fast().effect(() -> new MobEffectInstance(MobEffects.WITHER, 200, 1), 0.9f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 1), 0.9f).build())));
 
     public static final RegistryObject<Item> MOLTEN_JASPER = ITEMS.register("molten_jasper",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));

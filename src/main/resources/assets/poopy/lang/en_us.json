@@ -4,7 +4,15 @@
   "item.poopy.dried_poopy": "Dried Poopy",
   "item.poopy.jasper_crystal": "Jasper Crystal",
   "item.poopy.molten_jasper": "Molten Jasper",
+
   "block.poopy.jasper_ore": "Jasper Ore",
   "block.poopy.poopy_block": "Block of Poopy",
-  "itemGroup.poopytab": "Poopy"
+
+  "item.minecraft.potion.effect.poopy_essence": "Poopy Essence",
+  "item.minecraft.splash_potion.effect.poopy_essence": "Explosive Poopy Essence",
+  "item.minecraft.lingering_potion.effect.poopy_essence": "Lingering Poopy Essence",
+
+  "itemGroup.poopytab": "Poopy",
+
+  "effect.poopy.dysentery": "Dysentery"
 }

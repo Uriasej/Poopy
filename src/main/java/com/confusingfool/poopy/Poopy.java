@@ -1,11 +1,17 @@
 package com.confusingfool.poopy;
 
 import com.confusingfool.poopy.block.ModBlocks;
+import com.confusingfool.poopy.effect.ModEffects;
 import com.confusingfool.poopy.item.ModItems;
+import com.confusingfool.poopy.potion.ModPotions;
+import com.confusingfool.poopy.util.BetterBrewingRecipe;
 import com.confusingfool.poopy.world.feature.ModConfuguredFeatures;
 import com.confusingfool.poopy.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,13 +37,18 @@ public class Poopy
 
         ModConfuguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                    ModItems.DRIED_POOPY.get(), ModPotions.POOPY_ESSENCE.get()));
+        });
     }
 
 
