@@ -37,6 +37,9 @@ public class ModItems
     public static final RegistryObject<Item> FLESH = ITEMS.register("flesh",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
+    public static final RegistryObject<Item> POOPY_IN_A_BLANKET = ITEMS.register("poopy_in_a_blanket",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(4).saturationMod(5).meat().build())));
+
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);
