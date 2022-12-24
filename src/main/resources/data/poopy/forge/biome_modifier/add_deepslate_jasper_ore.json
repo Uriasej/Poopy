@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "*",
+  "features": "poopy:deepslate_jasper_ore_placed",
+  "step": "underground_ores"
+}

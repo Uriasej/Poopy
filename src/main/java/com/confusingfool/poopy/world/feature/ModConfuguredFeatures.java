@@ -24,8 +24,17 @@ public class ModConfuguredFeatures
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.JASPER_ORE.get().defaultBlockState())
     ))::get;
 
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> DEEPSLATE_JASPER_ORES = Suppliers.memoize(() -> List.of(
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.JASPER_ORE.get().defaultBlockState())
+    ));
+
+
     public static final RegistryObject<ConfiguredFeature<?,?>> JASPER_ORE = CONFIGURED_FEATURES.register("jasper_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_JASPER_ORES.get(), 20)));
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_JASPER_ORES.get(), 50)));
+
+    public static final RegistryObject<ConfiguredFeature<?,?>> DEEPSLATE_JASPER_ORE = CONFIGURED_FEATURES.register("deepslate_jasper_ore",
+            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DEEPSLATE_JASPER_ORES.get(), 50)));
+
 
     public static void register(IEventBus eventBus)
     {

@@ -21,6 +21,10 @@ public class ModPlacedFeatures
             () -> new PlacedFeature(ModConfuguredFeatures.JASPER_ORE.getHolder().get(),
                     commonOrePlacement(200, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(384)))));
 
+
+    public static final RegistryObject<PlacedFeature> DEEPSLATE_JASPER_ORE_PLACED = PLACED_FEATURES.register("deepslate_jasper_ore_placed",
+            () -> new PlacedFeature(ModConfuguredFeatures.DEEPSLATE_JASPER_ORE.getHolder().get(),
+                    commonOrePlacement(200, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(384)))));
     public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
         return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
     }
