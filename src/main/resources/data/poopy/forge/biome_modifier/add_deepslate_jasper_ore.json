@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "*",
+  "biomes": "#minecraft:dripstone_caves",
   "features": "poopy:deepslate_jasper_ore_placed",
   "step": "underground_ores"
 }
