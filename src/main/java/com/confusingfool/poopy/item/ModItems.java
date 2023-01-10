@@ -1,6 +1,7 @@
 package com.confusingfool.poopy.item;
 
 import com.confusingfool.poopy.Poopy;
+import com.confusingfool.poopy.item.custom.PoopyItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -17,7 +18,7 @@ public class ModItems
 
 
     public static final RegistryObject<Item> POOPY = ITEMS.register("poopy",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+            () -> new PoopyItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> POOPY_DIAMOND = ITEMS.register("poopy_diamond",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));

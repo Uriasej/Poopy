@@ -7,6 +7,16 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "poopy:poopy_diamond",
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.01
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "name": "poopy:poopy_block",
           "conditions": [
             {

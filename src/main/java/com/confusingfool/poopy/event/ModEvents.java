@@ -4,7 +4,10 @@ import com.confusingfool.poopy.Poopy;
 import com.confusingfool.poopy.effect.ModEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.entity.living.LivingDestroyBlockEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.player.PlayerDestroyItemEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,6 +35,15 @@ public class ModEvents
                     }
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerBreaks(BlockEvent.BreakEvent event)
+    {
+       // if ()
+        {
+
         }
     }
 }
