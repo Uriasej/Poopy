@@ -19,7 +19,7 @@ modId="poopy" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.0.3-1.19.2" #mandatory
+version="1.0.5-1.19.2" #mandatory
  # A display name for the mod
 displayName="Poopy" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -52,6 +52,8 @@ Find Jasper Ore and mine it to get Jasper Crystal.
 Put your Jasper Crystal in a Blast Furnace to get Melted Jasper.
 
 Put your Melted Jasper in the Brewing Stand as an ingredient along with Poopy Essence to get Dysentery Cure.
+
+Craft a Poopy Diamond Sword with your Poopy Diomonds, or use a smithing table and save a Poopy Diamond.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.poopy]] #optional
