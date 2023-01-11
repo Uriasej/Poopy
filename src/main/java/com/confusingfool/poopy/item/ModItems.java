@@ -1,14 +1,12 @@
 package com.confusingfool.poopy.item;
 
 import com.confusingfool.poopy.Poopy;
-import com.confusingfool.poopy.item.custom.JasperCrystalItem;
-import com.confusingfool.poopy.item.custom.MoltenJasperItem;
-import com.confusingfool.poopy.item.custom.PoopyDiamondItem;
-import com.confusingfool.poopy.item.custom.PoopyItem;
+import com.confusingfool.poopy.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,6 +41,10 @@ public class ModItems
 
     public static final RegistryObject<Item> POOPY_IN_A_BLANKET = ITEMS.register("poopy_in_a_blanket",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(4).saturationMod(5).build())));
+
+    public static final RegistryObject<Item> POOPY_DIAMOND_SWORD = ITEMS.register("poopy_diamond_sword",
+            () -> new PoopySwordItem(Tiers.DIAMOND, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static void register(IEventBus eventBus)
     {
