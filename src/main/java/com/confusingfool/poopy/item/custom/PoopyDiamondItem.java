@@ -10,16 +10,16 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class PoopyItem extends Item
+public class PoopyDiamondItem extends Item
 {
-    public PoopyItem(Properties properties) { super(properties);}
+    public PoopyDiamondItem(Properties properties) { super(properties);}
 
     @Override
     public void appendHoverText(ItemStack stack, Level level, List<Component> components, TooltipFlag flag)
     {
         if (Screen.hasShiftDown())
         {
-            components.add(Component.literal("You can make some very dangerous things with this item, partner... be careful! Also, if you craft it into a block, break the block with the correct tool and you have a shot at winning a poopy diamond!").withStyle(ChatFormatting.AQUA));
+            components.add(Component.literal("Use in a stonecutter to get a diamond. This will change in the coming updates to the Poopy mod.").withStyle(ChatFormatting.AQUA));
         } else {
             components.add(Component.literal("Press SHIFT for more info").withStyle(ChatFormatting.YELLOW));
         }
