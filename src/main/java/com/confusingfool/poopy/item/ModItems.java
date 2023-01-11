@@ -1,6 +1,8 @@
 package com.confusingfool.poopy.item;
 
 import com.confusingfool.poopy.Poopy;
+import com.confusingfool.poopy.item.custom.JasperCrystalItem;
+import com.confusingfool.poopy.item.custom.MoltenJasperItem;
 import com.confusingfool.poopy.item.custom.PoopyDiamondItem;
 import com.confusingfool.poopy.item.custom.PoopyItem;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -25,13 +27,13 @@ public class ModItems
             () -> new PoopyDiamondItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> JASPER_CRYSTAL = ITEMS.register("jasper_crystal",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+            () -> new JasperCrystalItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> DRIED_POOPY = ITEMS.register("dried_poopy",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(2.4f).meat().fast().effect(() -> new MobEffectInstance(MobEffects.WITHER, 200, 1), 0.9f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 1), 0.9f).build())));
 
     public static final RegistryObject<Item> MOLTEN_JASPER = ITEMS.register("molten_jasper",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+            () -> new MoltenJasperItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> FOUL_POOPY = ITEMS.register("foul_poopy",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
@@ -40,7 +42,7 @@ public class ModItems
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> POOPY_IN_A_BLANKET = ITEMS.register("poopy_in_a_blanket",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(4).saturationMod(5).meat().build())));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB).food(new FoodProperties.Builder().nutrition(4).saturationMod(5).build())));
 
     public static void register(IEventBus eventBus)
     {
