@@ -20,6 +20,9 @@ public class ModEffects
     public static final RegistryObject<MobEffect> DYSENTERY_CURE_EFFECT = MOB_EFFECTS.register("dysentery_cure_effect",
             () -> new DysenteryCureEffect(MobEffectCategory.BENEFICIAL, 10478271));
 
+    public static final RegistryObject<MobEffect> CONSTIPATION_EFFECT = MOB_EFFECTS.register("constipation_effect",
+            () -> new ConstipationEffect(MobEffectCategory.HARMFUL, 1777152));
+
     public static void register(IEventBus eventBus)
     {
         MOB_EFFECTS.register(eventBus);

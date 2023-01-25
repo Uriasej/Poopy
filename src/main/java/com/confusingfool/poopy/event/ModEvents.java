@@ -24,19 +24,14 @@ public class ModEvents
     {
         if (event.getEntity() instanceof Player player && event.getItem().isEdible())
         {
-             if (Objects.requireNonNull(event.getItem().getFoodProperties(player)).isMeat()) {
-                if (player.isCrouching()) {
-                    if (player.isOnGround()) {
+             if (Objects.requireNonNull(event.getItem().getFoodProperties(player)).isMeat())
                         if (event.getDuration() == 0 && !event.getEntity().hasEffect(ModEffects.DYSENTERY.get())) {
                             player.spawnAtLocation(new ItemStack(POOPY.get()));
                         } else if (event.getDuration() == 0 && event.getEntity().hasEffect(ModEffects.DYSENTERY.get())) {
                             player.spawnAtLocation(new ItemStack(FOUL_POOPY.get()));
                         }
-                    }
                 }
             }
-        }
-    }
 
     @SubscribeEvent
     public static void onPlayerBreaks(BlockEvent.BreakEvent event)
