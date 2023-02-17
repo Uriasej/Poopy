@@ -27,11 +27,6 @@ public class ModBlocks
     public static final RegistryObject<Block> POOPY_BLOCK = registerBlock("poopy_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.POOPY_TAB);
 
-    public static final RegistryObject<Block> JASPER_ORE = registerBlock("jasper_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
-                    .strength(6f)
-                    .requiresCorrectToolForDrops(),
-                    UniformInt.of(3,7)), ModCreativeModeTab.POOPY_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
