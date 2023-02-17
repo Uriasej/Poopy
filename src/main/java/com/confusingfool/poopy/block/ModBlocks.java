@@ -25,25 +25,18 @@ public class ModBlocks
 
 
     public static final RegistryObject<Block> POOPY_BLOCK = registerBlock("poopy_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5f).requiresCorrectToolForDrops()), ModCreativeModeTab.POOPY_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5f).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> JASPER_ORE = registerBlock("jasper_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST)
-                    .strength(6f)
-                    .requiresCorrectToolForDrops(),
-                    UniformInt.of(3,7)), ModCreativeModeTab.POOPY_TAB);
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                            CreativeModeTab tab)
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block)
     {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
 

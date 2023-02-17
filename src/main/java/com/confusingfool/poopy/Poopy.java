@@ -2,15 +2,15 @@ package com.confusingfool.poopy;
 
 import com.confusingfool.poopy.block.ModBlocks;
 import com.confusingfool.poopy.effect.ModEffects;
+import com.confusingfool.poopy.item.ModCreativeModeTab;
 import com.confusingfool.poopy.item.ModItems;
 import com.confusingfool.poopy.potion.ModPotions;
 import com.confusingfool.poopy.util.BetterBrewingRecipe;
-import com.confusingfool.poopy.world.feature.ModConfuguredFeatures;
-import com.confusingfool.poopy.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -34,12 +34,12 @@ public class Poopy
 
         modEventBus.addListener(this::commonSetup);
 
-        ModConfuguredFeatures.register(modEventBus);
-        ModPlacedFeatures.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEffects.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -50,6 +50,24 @@ public class Poopy
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.POOPY_ESSENCE.get(),
                     ModItems.MOLTEN_JASPER.get(), ModPotions.DYSENTERY_CURE.get()));
         });
+    }
+
+    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    {
+        if (event.getTab() == ModCreativeModeTab.POOPY_TAB)
+        {
+            event.accept(ModItems.POOPY);
+            event.accept(ModItems.POOPY_DIAMOND);
+            event.accept(ModItems.POOPY_IN_A_BLANKET);
+            event.accept(ModItems.POOPY_DIAMOND_SWORD);
+            event.accept(ModItems.JASPER_CRYSTAL);
+            event.accept(ModItems.MOLTEN_JASPER);
+            event.accept(ModItems.FOUL_POOPY);
+            event.accept(ModItems.DRIED_POOPY);
+            event.accept(ModItems.FLESH);
+
+            event.accept(ModBlocks.POOPY_BLOCK);
+        }
     }
 
 

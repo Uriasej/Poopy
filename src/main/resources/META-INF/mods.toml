@@ -19,7 +19,7 @@ modId="poopy" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="1.2.5-1.19.2" #mandatory
+version="1.2.7-1.19.3" #mandatory
  # A display name for the mod
 displayName="Poopy" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -48,7 +48,7 @@ Put your poopy in a Smoker to get Dried Poopy.
 
 Brew up your Dried Poopy with an Awkward Potion to get Poopy Essence.
 
-Find Jasper Ore and mine it to get Jasper Crystal.
+Get Jasper Crystal from Poopy Blocks.
 Put your Jasper Crystal in a Blast Furnace to get Melted Jasper.
 
 Put your Melted Jasper in the Brewing Stand as an ingredient along with Poopy Essence to get Dysentery Cure.
@@ -72,6 +72,6 @@ Craft a Poopy Diamond Sword with your Poopy Diomonds, or use a smithing table an
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.19.2,1.20)"
+    versionRange="[1.19.3,1.20)"
     ordering="NONE"
     side="BOTH"
