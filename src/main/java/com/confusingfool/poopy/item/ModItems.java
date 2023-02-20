@@ -58,10 +58,10 @@ public class ModItems
     public static final RegistryObject<Item> HARDENED_POOPY_CHESTPLATE = ITEMS.register("hardened_poopy_chestplate",
             () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
-    public static final RegistryObject<Item> HARDENED_POOPY_LEGGING = ITEMS.register("hardened_poopy_leggings",
+    public static final RegistryObject<Item> HARDENED_POOPY_LEGGINGS = ITEMS.register("hardened_poopy_leggings",
             () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
-    public static final RegistryObject<Item> HARDENED_POOPY_BOOTS = ITEMS.register("hardened_poopy_Boots",
+    public static final RegistryObject<Item> HARDENED_POOPY_BOOTS = ITEMS.register("hardened_poopy_boots",
             () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
