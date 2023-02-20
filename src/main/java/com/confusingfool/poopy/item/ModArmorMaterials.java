@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum Modarmormaterials implements ArmorMaterial
+public enum ModArmorMaterials implements ArmorMaterial
 {
     LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
     return Ingredient.of(Items.LEATHER);
