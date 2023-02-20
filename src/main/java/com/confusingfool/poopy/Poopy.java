@@ -5,8 +5,6 @@ import com.confusingfool.poopy.effect.ModEffects;
 import com.confusingfool.poopy.item.ModItems;
 import com.confusingfool.poopy.potion.ModPotions;
 import com.confusingfool.poopy.util.BetterBrewingRecipe;
-import com.confusingfool.poopy.world.feature.ModConfuguredFeatures;
-import com.confusingfool.poopy.world.feature.ModPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,8 +32,6 @@ public class Poopy
 
         modEventBus.addListener(this::commonSetup);
 
-        ModConfuguredFeatures.register(modEventBus);
-        ModPlacedFeatures.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEffects.register(modEventBus);
 
