@@ -4,7 +4,9 @@ import com.confusingfool.poopy.Poopy;
 import com.confusingfool.poopy.item.custom.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SnowballItem;
 import net.minecraft.world.item.Tiers;
@@ -20,6 +22,9 @@ public class ModItems
 
 
     public static final RegistryObject<Item> POOPY = ITEMS.register("poopy",
+            () -> new PoopyItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+
+    public static final RegistryObject<Item> HARDENED_POOPY = ITEMS.register("hardened_poopy",
             () -> new PoopyItem(new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> POOPY_DIAMOND = ITEMS.register("poopy_diamond",
@@ -45,6 +50,19 @@ public class ModItems
 
     public static final RegistryObject<Item> POOPY_DIAMOND_SWORD = ITEMS.register("poopy_diamond_sword",
             () -> new PoopySwordItem(Tiers.DIAMOND, 2, 3f,
+                    new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+
+    public static final RegistryObject<Item> HARDENED_POOPY_HELMET = ITEMS.register("hardened_poopy_helmet",
+            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+    public static final RegistryObject<Item> HARDENED_POOPY_CHESTPLATE = ITEMS.register("hardened_poopy_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+    public static final RegistryObject<Item> HARDENED_POOPY_LEGGING = ITEMS.register("hardened_poopy_leggings",
+            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
+    public static final RegistryObject<Item> HARDENED_POOPY_BOOTS = ITEMS.register("hardened_poopy_Boots",
+            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static void register(IEventBus eventBus)
