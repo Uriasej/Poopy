@@ -27,5 +27,6 @@
   "itemGroup.poopytab": "Poopy",
 
   "effect.poopy.dysentery": "Dysentery",
-  "effect.poopy.dysentery_cure_effect": "Dysentery Cure"
+  "effect.poopy.dysentery_cure_effect": "Dysentery Cure",
+  "effect.poopy.constipation": "Constipation"
 }
