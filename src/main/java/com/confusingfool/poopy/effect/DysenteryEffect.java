@@ -18,13 +18,13 @@ public class DysenteryEffect extends MobEffect
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier)
     {
-        pLivingEntity.hurt(DamageSource.CRAMMING, 0.01F);
+        pLivingEntity.hurt(DamageSource.CRAMMING, 0.1F);
 
         pLivingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 800));
 
         if (pLivingEntity instanceof Player)
         {
-            ((Player)pLivingEntity).causeFoodExhaustion(0.005F * (float)(pAmplifier + 1));
+            ((Player)pLivingEntity).causeFoodExhaustion(0.05F * (float)(pAmplifier + 1));
         }
 
         super.applyEffectTick(pLivingEntity, pAmplifier);

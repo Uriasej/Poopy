@@ -53,16 +53,16 @@ public class ModItems
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static final RegistryObject<Item> HARDENED_POOPY_HELMET = ITEMS.register("hardened_poopy_helmet",
-            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.HEAD,
+            () -> new ArmorItem(ModArmorMaterials.HARDENED, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
     public static final RegistryObject<Item> HARDENED_POOPY_CHESTPLATE = ITEMS.register("hardened_poopy_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.CHEST,
+            () -> new ArmorItem(ModArmorMaterials.HARDENED, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
     public static final RegistryObject<Item> HARDENED_POOPY_LEGGINGS = ITEMS.register("hardened_poopy_leggings",
-            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.LEGS,
+            () -> new ArmorItem(ModArmorMaterials.HARDENED, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
     public static final RegistryObject<Item> HARDENED_POOPY_BOOTS = ITEMS.register("hardened_poopy_boots",
-            () -> new ArmorItem(ModArmorMaterials.HARDENED_POOPY, EquipmentSlot.FEET,
+            () -> new ArmorItem(ModArmorMaterials.HARDENED, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.POOPY_TAB)));
 
     public static void register(IEventBus eventBus)

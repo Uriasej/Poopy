@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial
 {
 
-    HARDENED_POOPY("hardened_poopy", 17, new int[]{3, 6, 7, 3}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+    HARDENED("hardened", 17, new int[]{3, 6, 7, 3}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
     return Ingredient.of(ModItems.HARDENED_POOPY.get());
 });
 
